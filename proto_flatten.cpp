@@ -108,7 +108,7 @@ int main(int argc, char *argv[]) {
 
   MyErrorPrinter err_printer;
   google::protobuf::compiler::Importer importer(&src_tree, &err_printer);
-  google::protobuf::FileDescriptor *fd = importer.Import(proto);
+  const google::protobuf::FileDescriptor *fd = importer.Import(proto);
   if (fd == NULL) {
     cout << "import failed" << endl;
     return -1;

@@ -4,7 +4,12 @@ cc_binary(
     "proto_flatten.cpp",
     "proto_utils_comm.h",
   ],
-  deps=["@com_google_protobuf//:protobuf"],
+  deps=[
+    "@com_google_protobuf//:protobuf",
+    "@boost//:algorithm",
+    "@boost//:filesystem",
+    "@boost//:program_options",
+  ],
   copts=[
     "-std=c++11",
   ],
