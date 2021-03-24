@@ -4,8 +4,7 @@ cc_binary(
     "proto_flatten.cpp",
     "proto_utils_comm.h",
   ],
-  includes=['.'],
-  deps=[],
+  deps=["@com_google_protobuf//:protobuf"],
   copts=[
     "-std=c++11",
   ],
